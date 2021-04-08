@@ -1,5 +1,6 @@
 #!/bin/bash
 APP_NAME=$1
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
 if [ -z "$APP_NAME" ]; then
     echo '[ERROR] Specify an react app name as a first arg.'
@@ -7,7 +8,7 @@ if [ -z "$APP_NAME" ]; then
 fi
 
 docker run --rm \
-    -v `pwd`/code:/code \
+    -v ${SCRIPT_DIR}/../code:/opt/react-apps \
     -w /code \
     -it react \
     /bin/bash -c \
