@@ -1,0 +1,16 @@
+version: '3'
+services:
+  react-app:
+    build: ./
+    image: react
+    hostname: react-app
+    container_name: react-app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./code:/opt/react-apps
+    working_dir: /opt/react-apps/sample-app
+    entrypoint: ['yarn', 'start']
+    ports:
+      - "3000:3000"
+    #tty: true

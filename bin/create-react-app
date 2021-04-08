@@ -1,0 +1,14 @@
+#!/bin/bash
+APP_NAME=$1
+
+if [ -z "$APP_NAME" ]; then
+    echo '[ERROR] Specify an react app name as a first arg.'
+    exit 1
+fi
+
+docker run --rm \
+    -v `pwd`/code:/code \
+    -w /code \
+    -it react \
+    /bin/bash -c \
+    "create-react-app ${APP_NAME}"
