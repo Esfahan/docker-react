@@ -16,14 +16,15 @@ $ create-react-app ${YOUR_APP_NAME}
 or
 
 ```
-$ git submodule update -i && git submoudle foreach git pull origin master
+$ git submodule add -f https://github.com/Esfahan/react-tutorial.git code/react-tutorial
+$ ./bin/yarn-install
 ```
 
 ## Usage
 ### yarn start
 
 ```
-$ docker-compose up
+$ ./bin/start
 ```
 
 ### Browse

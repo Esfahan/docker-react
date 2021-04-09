@@ -5,4 +5,5 @@ docker run --rm \
     -v ${SCRIPT_DIR}/../code:/opt/react-apps \
     -w /opt/react-apps/react-tutorial \
     -it react \
-    /bin/bash
+    /bin/bash -c \
+    "yarn install"

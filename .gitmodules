@@ -1,0 +1,4 @@
+[submodule "code/react-tutorial"]
+	path = code/react-tutorial
+	url = https://github.com/Esfahan/react-tutorial.git
+	ignore = dirty
