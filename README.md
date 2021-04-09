@@ -13,7 +13,7 @@ $ docker-compose build
 $ create-react-app ${YOUR_APP_NAME}
 ```
 
-or
+or Use react-tutorial as a submodule
 
 ```
 $ git submodule add -f https://github.com/Esfahan/react-tutorial.git code/react-tutorial
