@@ -1,0 +1,17 @@
+#!/bin/bash
+APP_NAME=$1
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+
+if [ -z "$APP_NAME" ]; then
+    echo '[ERROR] Specify an react app name as a first arg.'
+    exit 1
+fi
+
+set -x
+
+docker run --rm \
+    -v ${SCRIPT_DIR}/../code:/opt/react-apps \
+    -w /opt/react-apps/ \
+    -it react \
+    /bin/bash -c \
+    "create-react-app ${APP_NAME} --template typescript"

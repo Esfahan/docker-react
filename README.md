@@ -1,4 +1,4 @@
-# React
+# React with Docker
 
 ## Installation
 ### build
@@ -10,13 +10,28 @@ $ docker-compose build
 ### Create React App
 
 ```
-$ create-react-app ${YOUR_APP_NAME}
+$ ./bin/create-react-app ${YOUR_APP_NAME}
 ```
 
-or Use react-tutorial as a submodule
+If you use TypeScript
+
+```
+$ ./bin/create-react-app-with-typescript ${YOUR_APP_NAME}
+```
+
+### Submodule
 
 ```
 $ git submodule add -f https://github.com/Esfahan/react-tutorial.git code/react-tutorial
+```
+
+```
+$ git submodule update -i && git submodule foreach git pull origin master
+```
+
+### yarn install
+
+```
 $ ./bin/yarn-install ${YOUR_APP_NAME}
 ```
 
@@ -24,7 +39,7 @@ $ ./bin/yarn-install ${YOUR_APP_NAME}
 ### yarn start
 
 ```
-$ ./bin/start
+$ docker-compose up -d
 ```
 
 ### Browse
